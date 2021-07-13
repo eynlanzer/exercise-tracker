@@ -1,0 +1,216 @@
+@import '../../styles/variables.scss';
+
+.home__top {
+  background-image: linear-gradient(to bottom right, $color-lighter-green, $color-green);
+  width: 100%;
+}
+
+.home__top__container {
+  padding: 64px 5%;
+}
+
+.home__cards {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.home__card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 10%;
+  text-align: left;
+  margin-bottom: 20px;
+  height: 400px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.card__step {
+  display: flex;
+  justify-content: space-between;
+  h5 {
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 8px;
+    width: 64px;
+    height: 24px;
+  }
+  svg {
+    color: $color-green;
+    background-color: $color-lightest-green;
+    border-radius: 4px;
+    padding: 15px;
+  }
+}
+
+.card__text {
+  height: 150px;
+  h2 {
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  p {
+    color: $color-darker-gray;
+  }
+}
+
+.card__action {
+  color: $color-green;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 85px);
+}
+
+.home__main--intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  width: 90%;
+  left: 5%;
+  margin-top: 40px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: $color-darker-gray;
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    color: $color-darker-gray;
+    margin-bottom: 20px;
+  }
+}
+
+.home__main--intro--button {
+  display: flex;
+  margin-bottom: 40px;
+
+  p {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    font-size: 14px;
+    color: $color-green;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 20px;
+  }
+}
+
+.home__main--background {
+  // right: 0;
+  width: 100%;
+  // flex-grow: 1;
+  background-image: url('../../assets/monitor.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.home__middle {
+  height: 250px;
+  text-align: center;
+  width: 50%;
+  margin-top: 61px;
+  p {
+    color: $color-green;
+    font-weight: 600;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .home__main--intro {
+    position: absolute;
+    width: 40%;
+    margin-top: 0px;
+  }
+
+  .home__main--intro--button {
+    .button {
+      max-width: 230px;
+    }
+  }
+
+  .home__main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 90px);
+  }
+
+  .home__main--background {
+    position: absolute;
+    right: 0;
+    height: calc(100vh - 90px);
+    width: 50%;
+    background-position: left;
+    opacity: 1;
+  }
+
+  .home__cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .home__card {
+    height: 400px;
+    margin-bottom: 0;
+    margin-right: 50px;
+    padding: 4%;
+    width: calc(100% - 100px);
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .home__middle {
+    font-size: 36px;
+  }
+}
+
+@media (max-height: 650px) {
+  .home__main {
+    height: calc(100vh - 91px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .home__main--intro {
+    h1 {
+      font-size: 48px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    img {
+      max-width: 400px;
+    }
+  }
+}

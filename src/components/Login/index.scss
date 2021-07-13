@@ -1,0 +1,128 @@
+@import '../../styles/variables.scss';
+
+.login{
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: width 1s ease-in-out;
+  z-index: 3;
+  
+  &--visible{
+    width: 100vw;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.35em;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  
+  h3 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.35em;
+    margin-bottom: 40px;
+    color: $color-darker-gray;
+    width: 80%;
+  }
+}
+
+.login__container{
+  opacity: 0;
+  visibility: hidden;
+  &--visible{
+    width: 80%;
+    opacity: 1;
+    transition: opacity .5s ease-in-out .8s;
+    visibility: visible;
+  }
+}
+
+.login__back{
+  color: $color-green;
+  cursor: pointer;
+  left: 0;
+  top: 27px;
+  margin-left: 10%;
+  position: absolute;
+  outline: 0;
+}
+  
+.login__form{
+  input {
+    // border-radius: 100px;
+    border: 1px solid $color-gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: $color-black;
+    font-family: $font-primary;
+    height: 58px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    min-height: 58px;
+    padding: 0 20px;
+  }
+  :focus {
+    border: 2px solid $color-green;
+  }
+  ::placeholder {
+    color: $color-darker-gray;
+  }
+}
+
+.login__input{
+  background: #FFFFFF;
+  outline: none;
+}
+  
+.login__form__actions{
+  margin-top: 20px;
+}
+
+.login__form__error{
+  border-top: 1px solid hsla(0,0%,100%,.2);
+  display: flex;
+  font-size: 10px!important;
+  justify-content: center;
+  margin-top: 20px;
+  min-height: 61px;
+  opacity: 0;
+  text-align: center;
+  visibility: hidden;
+  &--visible{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-in-out;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .login{
+    &--visible{
+      width: 400px;
+      box-shadow: 0 0 0 1px #f6f6f6;
+    }
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .login{
+    h1 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+}

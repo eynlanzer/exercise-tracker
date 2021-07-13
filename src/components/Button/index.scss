@@ -1,0 +1,122 @@
+@import '../../styles/variables.scss';
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+  box-sizing:border-box;
+  font-weight: 500;
+
+  svg {
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+  }
+
+  span {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    display: none;
+  }
+
+  &--type-1 {
+    background: $color-green; /* Old browsers */
+    color: white;
+
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+
+  &--type-2 {
+    background: $color-black; /* Old browsers */
+    color: white;
+
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+
+  &--type-3 {
+    border: 1px solid $color-green;
+    color: $color-green;
+
+    &:hover, &:focus {
+      color: $color-green;
+    }
+  }
+
+  &--type-4 {
+    border: 1px solid $color-green;
+    background-color: $color-green;
+    color: white;
+
+    svg {
+      position: unset;
+      right: 0;
+      margin-right: 0;
+    }
+
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+
+  &--type-5 {
+    border: 1px solid $color-green;
+    background-color: $color-green;
+    color: white;
+
+    svg {
+      position: absolute;
+      left: 0;
+      margin-left: 15px;
+    }
+
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+
+  &--type-6 {
+    color: white;
+    background: $color-gray;
+    pointer-events: none;
+
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+
+  &--type-7 {
+    border: 2px solid #232323;
+    background-color: $color-green;
+    color: #232323;
+    border-radius: 90px;
+    font-weight: 700;
+
+    svg {
+      position: unset;
+      right: 0;
+      margin-right: 0;
+    }
+
+    &:hover, &:focus {
+      color: #232323;
+    }
+  }
+}
+
+@media (min-width: $screen-xl) {
+
+}
